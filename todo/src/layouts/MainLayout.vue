@@ -27,13 +27,30 @@
       >
         <q-scroll-area style="height: calc(100% - 188px); margin-top: 150px; border-right: 1px solid #ddd">
           <q-list padding>
-            <q-item clickable v-ripple>
+            <q-item
+            to="/"
+            exact
+            clickable
+            v-ripple>
               <q-item-section avatar>
                 <q-icon name="list"/>
               </q-item-section>
 
               <q-item-section>
                 Todo
+              </q-item-section>
+            </q-item>
+
+            <q-item to="/Help"
+            exact
+            clickable
+            v-ripple>
+              <q-item-section avatar>
+                <q-icon name="Help"/>
+              </q-item-section>
+
+              <q-item-section>
+                Help
               </q-item-section>
             </q-item>
           </q-list>
@@ -51,11 +68,13 @@
       </q-drawer>
 
     <q-page-container>
-      <router-view />
+      <keep-alive>
+        <router-view />
+      </keep-alive>
     </q-page-container>
   </q-layout>
 </template>
-
+testete teste aisdadjajsdir testetet ajdijasidi
 
 
 <script>
