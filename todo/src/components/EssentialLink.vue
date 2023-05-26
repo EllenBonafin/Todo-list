@@ -43,6 +43,10 @@ export default defineComponent({
     icon: {
       type: String,
       default: ''
+    },
+    Data:{
+      type: String,
+      default: ''
     }
   }
 })
