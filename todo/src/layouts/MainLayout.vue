@@ -74,12 +74,10 @@
     </q-page-container>
   </q-layout>
 </template>
-testete teste aisdadjajsdir testetet ajdijasidi
-
 
 <script>
 
-import { computed, defineComponent, ref } from 'vue'
+import { defineComponent, ref } from 'vue'
 import EssentialLink from 'components/EssentialLink.vue'
 
 const linksList = [
@@ -130,10 +128,6 @@ const linksList = [
 import { date } from 'quasar'
 export default defineComponent({
   name: 'MainLayout',
-
-  components: {
-    EssentialLink
-  },
 
   setup () {
     const leftDrawerOpen = ref(false)

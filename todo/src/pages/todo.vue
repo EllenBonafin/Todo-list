@@ -2,7 +2,24 @@
 
 <q-page class="bg-grey-3 column">
   <div class="row q-pa-sm bg-primary">
-  New task
+    <q-input
+    v-model="newTask"
+    class="col"
+    @keyup.enter="addTask"
+    square
+    filled
+    bg-color="wihte"
+    placeholder="Add task"
+    dense>
+
+        <template v-slot:append>
+          <q-btn
+          @click="addTask"
+          round
+          dense
+          flat icon="add" />
+        </template>
+      </q-input>
   </div>
   <q-list class="bg-white" separator bordered>
       <q-item v-for="(task, index) in tasks"
@@ -16,10 +33,6 @@
           class="no-pointer-events"
           color="primary"/>
         </q-item-section>
-        <q-item-section>
-          <q-item-label>{{ task.title }}</q-item-label>
-        </q-item-section>
-
         <q-item-section>
           <q-item-label>{{ task.title }}</q-item-label>
         </q-item-section>
@@ -44,6 +57,7 @@ import {defineComponent} from 'vue'
 export default defineComponent({
       data(){
         return{
+          newTask: '',
           tasks:[
             {
               title: 'read the book',
@@ -73,8 +87,16 @@ export default defineComponent({
         this.$q.notify("Task deleted :)")
       })
 
-        }
+        },
+        addTask(){
+        this.tasks.push({
+          title: this.newTask,
+          done: false
+        })
       }
+      }
+
+
   }
 )
 //

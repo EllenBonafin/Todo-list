@@ -47,7 +47,10 @@ export default defineComponent({
     Data:{
       type: String,
       default: ''
-    }
+    },
+    rules: {
+  "no-useless-catch": "off" // "off" or 0 both work
+  }
   }
 })
 </script>
