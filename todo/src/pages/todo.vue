@@ -49,6 +49,12 @@
         </q-item->
       </q-item>
     </q-list>
+    <div class="no-task absolute-center">
+      <div class="text-h5 text-primary text-center">
+        <q-icon name="check" size="100px" color="primary"/>
+        No tasks
+      </div>
+    </div>
   </q-page>
 </template>
 
@@ -59,18 +65,18 @@ export default defineComponent({
         return{
           newTask: '',
           tasks:[
-            {
-              title: 'read the book',
-              done: true
-            },
-            {
-              title: 'sing with your mom',
-              done: false
-            },
-            {
-              title: 'dance with your dad',
-              done: false
-            }
+          //   {
+          //     title: 'read the book',
+          //     done: true
+          //   },
+          //   {
+          //     title: 'sing with your mom',
+          //     done: false
+          //   },
+          //   {
+          //     title: 'dance with your dad',
+          //     done: false
+          //   }
           ]
         }
       },
@@ -108,6 +114,9 @@ export default defineComponent({
       text-decoration: line-through;
       color: #bbb;
     }
+  }
+  .no-task{
+    opacity: 0.5;
   }
 </style>
 
