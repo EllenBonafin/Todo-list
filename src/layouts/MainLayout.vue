@@ -13,10 +13,10 @@
 
       </q-toolbar>
       <div class="q-px-lg q-pt-xl q-mb-md">
-      <div class ="text-h3"> Todo</div>
+      <div class ="text-h4"> What's up, Ellen?</div>
       <div class="text-subtitle1">{{ todaysDate }}</div>
       </div>
-      <q-img src="https://cdn.pixabay.com/photo/2023/05/07/20/44/woman-7977101_1280.jpg" class="header-image absolute-top"/>
+      <!-- <q-img src="https://cdn.pixabay.com/photo/2023/05/07/20/44/woman-7977101_1280.jpg" class="header-image absolute-top"/> -->
   </q-header>
 
   <q-drawer
@@ -31,7 +31,8 @@
             to="/"
             exact
             clickable
-            v-ripple>
+            v-ripple
+            padding>
               <q-item-section avatar>
                 <q-icon name="list"/>
               </q-item-section>
@@ -46,7 +47,7 @@
             clickable
             v-ripple>
               <q-item-section avatar>
-                <q-icon name="Help"/>
+                <q-icon name="help"/>
               </q-item-section>
 
               <q-item-section>
@@ -56,7 +57,7 @@
           </q-list>
         </q-scroll-area>
 
-        <q-img class="absolute-top" src="https://cdn.pixabay.com/photo/2023/05/07/20/44/woman-7977101_1280.jpg" style="height: 165px">
+        <div class="absolute-top" style="height: 150px" color="primary">
           <div class="absolute-bottom bg-transparent">
             <q-avatar size="56px" class="q-mb-sm">
               <img src="https://www.petlove.com.br/images/breeds/193223/profile/original/golden_retriever-p.jpg?1532539102">
@@ -64,7 +65,7 @@
             <div class="text-weight-bold">Ellen Carine Bonafin Marques </div>
             <div>@ellencarine@outklock</div>
           </div>
-        </q-img>
+        </div>
       </q-drawer>
 
     <q-page-container>
@@ -145,6 +146,9 @@ export default defineComponent({
       const timeStamp = Date.now()
       return date.formatDate(timeStamp, 'dddd D MMMM')
     }
+},
+methods: {
+  
 }
 })
 // export default {
