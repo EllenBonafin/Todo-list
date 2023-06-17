@@ -3,7 +3,7 @@
   <q-header>
       <q-toolbar>
         <q-btn
-          flat
+        flat
           dense
           round
           icon="menu"
@@ -137,7 +137,7 @@ export default defineComponent({
       essentialLinks: linksList,
       leftDrawerOpen,
       toggleLeftDrawer () {
-        leftDrawerOpen.value = false
+        leftDrawerOpen.value = !leftDrawerOpen.value;
       }
 }
   },
@@ -148,7 +148,7 @@ export default defineComponent({
     }
 },
 methods: {
-  
+
 }
 })
 // export default {
