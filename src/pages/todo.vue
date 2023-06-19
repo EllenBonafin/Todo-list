@@ -50,9 +50,8 @@
       </q-item>
     </q-list>
     <div class="no-task absolute-center">
-      <div class="text-h5 text-primary text-center">
-        <q-icon name="check" size="100px" color="primary"/>
-        No tasks
+      <div class="text-h6 text-primary text-center">
+        No tasks yet
       </div>
     </div>
   </q-page>
@@ -109,6 +108,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+@import url('https://fonts.googleapis.com/css2?family=Merienda&display=swap');
   .done{
     .q-item__label{
       text-decoration: line-through;
